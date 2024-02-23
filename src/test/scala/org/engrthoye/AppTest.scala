@@ -9,6 +9,8 @@ class AppTest extends TableReader {
 
   def tableReader(spark: SparkSession): DataFrame = {
     val df = spark.read.parquet(s"C:\\project\\demo2\\src\\test\\resources\\tableserver\\parquet\\Flights.parquet")
+
+
     df.show(false)
     df
   }
